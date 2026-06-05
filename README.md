@@ -44,11 +44,9 @@ pip install justserpapi
 
 ```python
 from justserpapi import Client
-from justserpapi.api.google_api_api import GoogleAPIApi
 
 with Client(api_key="YOUR_API_KEY") as client:
-    google_api = GoogleAPIApi(client.api_client)
-    response = google_api.immersive_product(
+    response = client.google.immersive.product(
         page_token="YOUR_PAGE_TOKEN",
         country="us",
         language="en",
